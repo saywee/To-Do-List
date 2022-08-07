@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: navy;
+}
+
+.container{
+    background-color: white;
+    margin: 135px auto;
+    max-width: 400px;
+    border-radius: 7px;
+    padding-top: 20px;
+}
+
+.task-input{
+    height: 52px;
+    padding: 0 25px;
+}
+
+.task-input input{
+    height: 100%;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #999;
+    padding: 0 20px 0 53px;
+    outline: none;
+}
+
+.controls, li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.controls{
+    padding: 18px 25px;
+    border-bottom: 1px solid #ccc;
+}
+
+.task-box{
+    margin: 20px 20px;
+}
+
+.task-box .task{
+    list-style: none;
+    font-size: 17px;
+    margin-bottom: 18px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ccc;
+}
+
+.task-box .task:last-child{
+    margin-bottom: 0;
+    border-bottom: 0;
+    padding-bottom: 20px;
+}
+
+.task label{
+    display: flex;
+}
+
+.task label input{
+    margin-top: 6px;
+    margin-right: 12px;
+}
+
+.task.drag {
+    background-color: #999;
+    opacity: 0.5;
+}
+
+.task .settings{
+    cursor: pointer;
+    position: relative;
+}
+.settings .task-menu{
+    position: absolute;
+    background-color: #fff;
+    padding: 5px 0;
+    z-index: 2;
+    right: -5px;
+    bottom: -65px;
+    border-radius: 4px;
+    transform: scale(0);
+    transform-origin: top right;
+    transition: transform 0.2s ease;
+}
+
+.settings .task-menu.show{
+    transform: scale(1);
+}
+
+.task-menu li{
+    height: 25px;
+    font-size: 16px;
+    padding: 17px 15px;
+    margin-bottom: 2px;
+    justify-content: flex-start;
+}
